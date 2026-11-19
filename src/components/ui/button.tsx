@@ -1,0 +1,2 @@
+import type {ButtonHTMLAttributes} from 'react';
+export function Button({variant='default',className='',...props}:ButtonHTMLAttributes<HTMLButtonElement>&{variant?:'default'|'outline'|'ghost'}) {return <button type="button" className={`inline-flex items-center justify-center rounded border px-4 py-2 text-sm transition-colors disabled:opacity-50 ${variant==='default'?'border-primary bg-primary text-primary-foreground':'border-border bg-background text-foreground hover:bg-muted'} ${className}`} {...props}/>;}

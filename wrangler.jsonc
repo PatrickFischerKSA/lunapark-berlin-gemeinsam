@@ -1,0 +1,21 @@
+{
+  "name": "lunapark-berlin-gemeinsam",
+  "main": "worker/index.mjs",
+  "account_id": "22a2c05c1bf9bca855767eb6dad549c2",
+  "compatibility_date": "2026-11-19",
+  "workers_dev": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "lunapark-berlin-gemeinsam",
+      "database_id": "284582ab-70cb-4f66-8776-c6bb153542bd",
+      "migrations_dir": "worker/migrations"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "lunapark-berlin-medien"
+    }
+  ]
+}
