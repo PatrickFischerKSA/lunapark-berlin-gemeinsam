@@ -55,3 +55,13 @@ Backendänderungen separat mit autorisiertem Cloudflare-Zugang veröffentlichen.
 `reference/` enthält die exportierte Original-Startseite und Komponenten. `src/Article.tsx` und die redaktionellen Komponenten enthalten die Integration der gemeinsamen Bearbeitung. Die Feld-IDs leiten sich aus den ursprünglichen Quellpositionen und dynamischen Ausgangstexten ab. `scripts/prepare-editor.mjs` dokumentiert die einmalige Überführung; nur bewusst erneut ausführen, da geänderte Quellpositionen Feld-IDs verändern können.
 
 Die acht übernommenen Originalmedien liegen unter `public/media/` und benötigen keinen Lovable-Zugang. Lizenz- und Quellenhinweise wurden aus dem Original übernommen. Die Roman-PDF wird nicht öffentlich bereitgestellt. Neue Textinhalte werden als Text gerendert, niemals als HTML.
+
+## Projektverwaltung im Browser
+
+Der bisherige Bearbeitungslink bleibt unverändert. Über **Projekt verwalten** können Mitwirkende Unterseiten erstellen, umbenennen, sortieren und entfernen. Jede neue Seite wird automatisch in die Navigation aufgenommen. Unter **Navigation** lassen sich Menüeinträge unabhängig sortieren, umbenennen, ausblenden, entfernen und auf Seiten, externe Webadressen oder vorhandene `#abschnitt`-Ziele verweisen.
+
+Unterseiten und die Startseite lassen sich mit Text-, Überschriften-, Bild-, Video-, Zitat- und Trennlinien-Bausteinen aufbauen. Bausteine können umgeordnet und entfernt werden; Medien werden im eigenen Projektspeicher abgelegt. Unter **Startseite umbauen** lassen sich die vorhandenen Originalabschnitte sortieren und ausblenden. Ausgeblendete Inhalte werden nicht gelöscht. Die Abschnittsauswahl erscheint nach dem Laden der Startseite.
+
+Alle Änderungen speichern automatisch für alle. Vor dem Schliessen auf die Speicherbestätigung warten. Konflikte am selben Feld müssen aufgelöst werden. Frühere Fassungen stehen im Versionsverlauf bereit. Alte gespeicherte Stände erhalten automatisch eine Startseite, bestehende redaktionelle Inhalte bleiben bestehen. Auch ältere noch offene Browserfassungen können die neue Seitenverwaltung beim Speichern nicht entfernen.
+
+Seiten-Direktlinks verwenden `?page=<feste-id>` und bleiben beim Umbenennen gültig. Der Ansichtslink enthält keinen Bearbeitungsschlüssel. Aus dem Menü ausgeblendete Seiten bleiben über ihren Direktlink erreichbar. Die Projektverwaltung gibt keinen Zugriff auf ChatGPT, Codex, Lovable, Abonnements oder KI-Konten.

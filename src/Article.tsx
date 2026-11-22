@@ -1,3 +1,4 @@
+import {HomeSections,HomeSection} from '@/components/site-manager';
 import { EditableText, SharedMedia } from "@/components/shared-editor";
 import { lazy, Suspense, useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
@@ -18,8 +19,17 @@ const nav = [["fall", "Der Fall"], ["kontext", "1934"], ["orte", "Orte"], ["pers
 export default function Index() {
   return <main className="bg-background text-foreground">
   <a href="#interpretation" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-background focus:p-4 focus:text-primary"><EditableText id="src_Article_tsx_1451" value={"Zum Inhalt"} /></a>
-  <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur"><div className="mx-auto flex max-w-6xl items-center gap-6 px-6 py-3"><a href="#top" className="shrink-0 font-display text-xl italic text-primary"><EditableText id="src_Article_tsx_1706" value={"Lunapark"} /></a><div className="flex gap-5 overflow-x-auto text-xs uppercase text-muted-foreground">{nav.map(([id, label]) => <a key={id} href={`#${id}`} className="shrink-0 hover:text-primary"><EditableText id="src_Article_tsx_1895" value={label} /></a>)}</div></div></nav>
-  <Hero /><Interpretation /><Fall /><Kontext /><Orte /><Perspektiven /><Fritze /><Gegenwart /><Ausblick /><Quellen />
+  <HomeSections><HomeSection id="original-navigation" label="Ursprüngliche Kapitelnavigation"><nav className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur"><div className="mx-auto flex max-w-6xl items-center gap-6 px-6 py-3"><a href="#top" className="shrink-0 font-display text-xl italic text-primary"><EditableText id="src_Article_tsx_1706" value={"Lunapark"} /></a><div className="flex gap-5 overflow-x-auto text-xs uppercase text-muted-foreground">{nav.map(([id, label]) => <a key={id} href={`#${id}`} className="shrink-0 hover:text-primary"><EditableText id="src_Article_tsx_1895" value={label} /></a>)}</div></div></nav></HomeSection>
+<HomeSection id="hero" label="Titelseite"><Hero/></HomeSection>
+<HomeSection id="interpretation" label="Leitfrage"><Interpretation/></HomeSection>
+<HomeSection id="fall" label="Der Fall"><Fall/></HomeSection>
+<HomeSection id="kontext" label="Historischer Kontext"><Kontext/></HomeSection>
+<HomeSection id="orte" label="Orte"><Orte/></HomeSection>
+<HomeSection id="perspektiven" label="Perspektiven"><Perspektiven/></HomeSection>
+<HomeSection id="fritze" label="Fritze"><Fritze/></HomeSection>
+<HomeSection id="gegenwart" label="Gegenwart"><Gegenwart/></HomeSection>
+<HomeSection id="ausblick" label="Ausblick"><Ausblick/></HomeSection>
+<HomeSection id="quellen" label="Quellen"><Quellen/></HomeSection></HomeSections>
 </main>;
 }
 function Section({
